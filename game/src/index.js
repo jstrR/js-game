@@ -2,7 +2,6 @@ import drawGameBackgroundEarth from './js/game-background.js';
 import damage from './js/mathMethod.js';
 import drawMainHero from './js/main-hero.js';
 import drawMonster from './js/monster.js';
-import transMet from './js/translate.js';
 import audio from './js/audioMet.js';
 
 let canvas = document.createElement("canvas");

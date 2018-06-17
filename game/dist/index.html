@@ -10,20 +10,7 @@
     <body>
         <div class="casts">
         	<button class="btn" id="callMathMet">Arithmetics</button>
-        	<button class="btn" id="callTransMet">Translate</button>
         	<button class="btn" id="callAudioMet">Audio</button>
-        	<button class="btn" value="">asda</button>
-        	<button class="btn" value="">asda</button>
-        	<button class="btn" value="">asda</button>
-        	<button class="btn" value="">asda</button>
-        	<button class="btn" value="">asda</button>
-        	<button class="btn" value="">asda</button>
-        	<button class="btn" value="">asda</button>
-        	<button class="btn" value="">asda</button>
-        	<button class="btn" value="">asda</button>
-        	<button class="btn" value="">asda</button>
-        	<button class="btn" value="">asda</button>
-        	<button class="btn" value="">asda</button>
         </div>
         <div class="mathMet">
         	<span class="taskHeading">Solve an example:</span>
@@ -32,14 +19,6 @@
         	<input type="text" id="userMathInput">
         	<button type="submit" id="sendMathAnswer" class="send">Подтвердить</button>
             <button type="submit" id="mathMainMenu" class="send">Назад</button>
-        </div>
-        <div class="transMet">
-            <span class="taskHeading">Translate next word:</span>
-            <span class="task"></span>
-            <label for="#userInput">Your answer:</label>
-            <input type="text" id="userInput">
-            <button type="submit" id="sendAnswer" class="send">Подтвердить</button>
-            <button type="submit" id="mainMenu" class="send">Назад</button>
         </div>
         <div class="audioMet">
             <span class="taskHeading">Type the word that you've heard:</span>
@@ -57,8 +36,22 @@
         	<span class="monster-name"></span>
             <span class="monster-HP"></span>
         </div>
-
-
+        <div class="game-over">
+            <span class="game-over-heading">You are dead</span>
+            <table>
+                <caption>Leaderboard</caption>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>streak</th>
+                    </tr>
+                </thead>
+                <tbody class="lowbody">
+                </tbody>
+            </table>
+            
+            <button type="submit" id="goLP" class="send">Вернуться в меню</button>
+        </div>    
         <script src="bundle.js"></script>
     </body>
 </html>
