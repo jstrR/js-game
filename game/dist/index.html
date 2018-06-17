@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Game.js</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <div class="casts">
+        	<button class="btn" id="callMathMet">Arithmetics</button>
+        	<button class="btn" id="callTransMet">Translate</button>
+        	<button class="btn" id="callAudioMet">Audio</button>
+        	<button class="btn" value="">asda</button>
+        	<button class="btn" value="">asda</button>
+        	<button class="btn" value="">asda</button>
+        	<button class="btn" value="">asda</button>
+        	<button class="btn" value="">asda</button>
+        	<button class="btn" value="">asda</button>
+        	<button class="btn" value="">asda</button>
+        	<button class="btn" value="">asda</button>
+        	<button class="btn" value="">asda</button>
+        	<button class="btn" value="">asda</button>
+        	<button class="btn" value="">asda</button>
+        	<button class="btn" value="">asda</button>
+        </div>
+        <div class="mathMet">
+        	<span class="taskHeading">Solve an example:</span>
+        	<span class="task"></span>
+        	<label for="#userMathInput">Your answer:</label>
+        	<input type="text" id="userMathInput">
+        	<button type="submit" id="sendMathAnswer" class="send">Подтвердить</button>
+            <button type="submit" id="mathMainMenu" class="send">Назад</button>
+        </div>
+        <div class="transMet">
+            <span class="taskHeading">Translate next word:</span>
+            <span class="task"></span>
+            <label for="#userInput">Your answer:</label>
+            <input type="text" id="userInput">
+            <button type="submit" id="sendAnswer" class="send">Подтвердить</button>
+            <button type="submit" id="mainMenu" class="send">Назад</button>
+        </div>
+        <div class="audioMet">
+            <span class="taskHeading">Type the word that you've heard:</span>
+            <span class="task">
+                <audio src="" controls></audio>
+            </span>
+            <label for="#userAudioInput">Your answer:</label>
+            <input type="text" id="userAudioInput">
+            <button type="submit" id="sendAudioAnswer" class="send">Подтвердить</button>
+            <button type="submit" id="audioMainMenu" class="send">Назад</button>
+        </div>
+        <div class="monster-info">
+            <span class="mainHero-name">Main Hero</span>
+            <span class="mainHero-HP"></span>
+        	<span class="monster-name"></span>
+            <span class="monster-HP"></span>
+        </div>
+
+
+        <script src="bundle.js"></script>
+    </body>
+</html>
