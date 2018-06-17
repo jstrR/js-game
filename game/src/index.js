@@ -3,6 +3,7 @@ import damage from './js/mathMethod.js';
 import drawMainHero from './js/main-hero.js';
 import drawMonster from './js/monster.js';
 import audio from './js/audioMet.js';
+import falsy from './js/falsy.js';
 
 let canvas = document.createElement("canvas");
 let ctx = canvas.getContext("2d");
