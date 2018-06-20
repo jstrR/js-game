@@ -1,16 +1,20 @@
-
 export default function incorrectAnswer(){
+
 	const showMainHeroHP = document.querySelector('.mainHero-HP');
-	let damage = Math.floor(Math.random() * (100 - 0) + 0);
+	let damage = Math.floor(Math.random() * (50 - 0) + 0);
 	let currMainHeroHP = localStorage.getItem('mainHero');
 	currMainHeroHP = currMainHeroHP - damage;
+
 	if(currMainHeroHP > 0){
+
 		localStorage.setItem('mainHero', currMainHeroHP);
 		setTimeout(() => {
-	  showMainHeroHP.innerHTML = currMainHeroHP + ' HP';
+	    showMainHeroHP.innerHTML = currMainHeroHP + ' HP';
 	}, 3000)
-	alert('Your answer is incorrect');
+		alert('Your answer is incorrect');
+
 	} if(currMainHeroHP <= 0) {
+
 		let monstersKilled = +localStorage.getItem('monstersKilled');
 		let playerid = +localStorage.getItem('curplayerid');
 		let rating = localStorage.getItem('rating');

@@ -8,10 +8,17 @@
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
+        <button class="btn menu-open">Открыть задачи</button>
         <div class="casts">
         	<button class="btn" id="callMathMet">Arithmetics</button>
         	<button class="btn" id="callAudioMet">Audio</button>
-            <button class="btn" id="callFalsyMet">true/false</button>
+            <button class="btn" id="callTranslateMet">Translate</button>
+            <button class="btn" id="callFalsyMet">True/False</button>
+            <button class="btn" id="callMissedMet">Missed letter</button>
+            <button class="btn" id="callSeqMet">Sequences</button>
+            <button class="btn" id="callActMet">Actors</button>
+            <button class="btn" id="callQMet">Questions</button>
+            <button class="btn" id="callLessMet">Less/More</button>
         </div>
         <div class="mathMet">
         	<span class="taskHeading">Solve an example:</span>
@@ -22,7 +29,7 @@
             <button type="submit" id="mathMainMenu" class="send">Назад</button>
         </div>
         <div class="audioMet">
-            <span class="taskHeading">Type the word that you've heard:</span>
+            <span class="taskHeading">Enter the word that you heard:</span>
             <span class="task">
                 <audio src="" controls></audio>
             </span>
@@ -32,12 +39,60 @@
             <button type="submit" id="audioMainMenu" class="send">Назад</button>
         </div>
         <div class="falsyMet">
-            <span class="taskHeading">Type true or false:</span>
+            <span class="taskHeading">Enter true or false:</span>
             <span class="task" id="falsyText"></span>
             <label for="#userFalsyInput">Your answer:</label>
             <input type="text" id="userFalsyInput">
             <button type="submit" id="sendFalsyAnswer" class="send">Подтвердить</button>
             <button type="submit" id="FalsyMainMenu" class="send">Назад</button>
+        </div>
+        <div class="translateMet">
+            <span class="taskHeading">Translate the next word:</span>
+            <span class="task" id="translateText"></span>
+            <label for="#userTranslateInput">Your answer:</label>
+            <input type="text" id="userTranslateInput">
+            <button type="submit" id="sendTranslateAnswer" class="send">Подтвердить</button>
+            <button type="submit" id="translateMainMenu" class="send">Назад</button>
+        </div>
+        <div class="missedMet">
+            <span class="taskHeading">Enter the missing letter:</span>
+            <span class="task" id="missedText"></span>
+            <label for="#userMissedInput">Your answer:</label>
+            <input type="text" id="userMissedInput">
+            <button type="submit" id="sendMissedAnswer" class="send">Подтвердить</button>
+            <button type="submit" id="missedMainMenu" class="send">Назад</button>
+        </div>
+        <div class="seqMet">
+            <span class="taskHeading">Solve the sequence:</span>
+            <span class="task" id="seqText"></span>
+            <label for="#userSeqInput">Your answer:</label>
+            <input type="text" id="userSeqInput">
+            <button type="submit" id="sendSeqAnswer" class="send">Подтвердить</button>
+            <button type="submit" id="seqMainMenu" class="send">Назад</button>
+        </div>
+        <div class="actMet">
+            <span class="taskHeading">Enter the name and surname of the actor:</span>
+            <img class="task" id="actImg"></img>
+            <label for="#userActInput">Your answer:</label>
+            <input type="text" id="userActInput">
+            <button type="submit" id="sendActAnswer" class="send">Подтвердить</button>
+            <button type="submit" id="actMainMenu" class="send">Назад</button>
+        </div>
+        <div class="qMet">
+            <span class="taskHeading">Solve the sequence:</span>
+            <span class="task" id="qText"></span>
+            <label for="#userQInput">Your answer:</label>
+            <input type="text" id="userQInput">
+            <button type="submit" id="sendQAnswer" class="send">Подтвердить</button>
+            <button type="submit" id="qMainMenu" class="send">Назад</button>
+        </div>
+        <div class="lessMet">
+            <span class="taskHeading">Enter < OR >:</span>
+            <span class="task" id="lessText"></span>
+            <label for="#userLessInput">Your answer:</label>
+            <input type="text" id="userLessInput">
+            <button type="submit" id="sendLessAnswer" class="send">Подтвердить</button>
+            <button type="submit" id="lessMainMenu" class="send">Назад</button>
         </div>
         <div class="monster-info">
             <span class="mainHero-name">Main Hero</span>
@@ -58,7 +113,6 @@
                 <tbody class="lowbody">
                 </tbody>
             </table>
-            
             <button type="submit" id="goLP" class="send">Вернуться в меню</button>
         </div>    
         <script src="bundle.js"></script>

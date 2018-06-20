@@ -13,7 +13,7 @@ const answer = document.querySelector('#userMathInput');
 const task = document.querySelector('.task');
 
 let randomize = function() {
-	let max = 100;
+	let max = 30;
 	let min = 0;
 	let firstNum = 0;
 	let secNum = 0;
@@ -34,24 +34,30 @@ callMet.addEventListener('click', event =>{
 });
 
 let returnResult = function(){
-	let answer = 0;
+	let returnedAnswer = 0;
 	switch(data[0]) {
 		case '+':
-			answer = data[1] + data[2];
-			return '' + answer;
+			returnedAnswer = data[1] + data[2];
+			return '' + returnedAnswer;
 			break;
 		case '-':
-			answer = data[1] - data[2];
-			return '' + answer;
+			returnedAnswer = data[1] - data[2];
+			return '' + returnedAnswer;
 			break;
 		case '*':
-			answer = data[1] * data[2];
-			return '' + answer;
+			returnedAnswer = data[1] * data[2];
+			return '' + returnedAnswer;
 			break;
 		case '/':
-			answer = data[1] / data[2];
-			return answer.toFixed(1);
+			returnedAnswer = data[1] / data[2];
+			if(returnedAnswer % 2 === 0){
+				returnedAnswer = returnedAnswer.toFixed(0);
+				return returnedAnswer;
+			} else {
+				returnedAnswer = returnedAnswer.toFixed(1);
+				return returnedAnswer;
 			break;
+			}
 	}
 }
 

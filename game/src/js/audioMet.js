@@ -12,46 +12,29 @@ const callMet = document.querySelector('#callAudioMet');
 const answer = document.querySelector('#userAudioInput');
 const audio = document.querySelector('audio');
 
-let audioList = ['../src/sound/activity.mp3', '../src/sound/dog.mp3', '../src/sound/global.mp3', '../src/sound/inspiration.mp3', '../src/sound/mind.mp3', '../src/sound/strategy.mp3', '../src/sound/transfer.mp3'];
-let currRandAudio = 0;
+const audioList = {
+	'../src/sound/activity.mp3' : 'activity',
+	'../src/sound/dog.mp3' : 'dog',
+	'../src/sound/global.mp3' : 'global',
+	'../src/sound/inspiration.mp3' : 'inspiration',
+	'../src/sound/mind.mp3': 'mind',
+	'../src/sound/strategy.mp3' : 'strategy',
+	'../src/sound/transfer.mp3' : 'transfer'
+};
+
+let randAudio = '';
 
 let pickRandAudio = function () {
-	let randNumber = Math.floor(Math.random() * audioList.length);
+	let randNumber = Math.floor(Math.random() * Object.keys(audioList).length);
 	return randNumber;
 }
 
 callMet.addEventListener('click', event =>{
 	castsModal.style.display = 'none'; 
-	currRandAudio = pickRandAudio();
-	audio.src = audioList[currRandAudio];
+	randAudio = Object.keys(audioList)[pickRandAudio()];
+	audio.src = randAudio;
 	currTask.style.display = 'flex';
 });
-
-let returnResult = function(){
-	switch(currRandAudio) {
-		case 0:
-			return 'activity';
-			break;
-		case 1:
-			return 'dog';
-			break;
-		case 2:
-			return 'global';
-			break;
-		case 3:
-			return 'inspiration';
-			break;
-		case 4:
-			return 'mind';
-			break;
-		case 5:
-			return 'strategy';
-			break;
-		case 6:
-			return 'transfer';
-			break;
-	}
-}
 
 mainMenu.addEventListener('click', event =>{
 	currTask.style.display = 'none';
@@ -59,7 +42,7 @@ mainMenu.addEventListener('click', event =>{
 });
 
 checkAnswer.addEventListener('click', event =>{
-	if(answer.value === returnResult()){
+	if(answer.value === audioList[randAudio]){
 		correctAnswer();
 		currTask.style.display = 'none';
 		audio.src = '';

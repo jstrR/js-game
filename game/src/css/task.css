@@ -1,6 +1,12 @@
 .mathMet,
 .falsyMet,
-.audioMet{
+.audioMet,
+.translateMet,
+.missedMet,
+.seqMet,
+.actMet,
+.qMet,
+.lessMet{
 	width: 550px;
 	height: 400px;
 	display: flex;
@@ -11,9 +17,14 @@
 	border-radius: 10px;
 	position: absolute;
 	z-index: 5;
-	left: 38%;
-	top: 15%;
+	left: 35%;
+	top: 10%;
 	display: none;
+}
+
+.actMet{
+	width: 550px;
+	height: 480px;
 }
 
 .taskHeading,
