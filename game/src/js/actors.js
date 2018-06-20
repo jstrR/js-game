@@ -13,11 +13,11 @@ const answer = document.querySelector('#userActInput');
 const img = document.querySelector('img');
 
 let actors = {
-	'../src/img/Smith.PNG' : ['will smith', 'Will Smith'],
-	'../src/img/keanureeves.PNG' : ['Keanu Reeves', 'keanu reeves'],
-	'../src/img/bacon.PNG' : ['Kevin Bacon', 'kevin bacon'],
-	'../src/img/redford.PNG' : ['Robert Radford', 'robert radford'],
-	'../src/img/jaredleto.PNG' : ['Jared Leto', 'jared leto']
+	'../src/img/Smith.png' : ['will smith', 'Will Smith'],
+	'../src/img/keanureeves.png' : ['Keanu Reeves', 'keanu reeves'],
+	'../src/img/bacon.png' : ['Kevin Bacon', 'kevin bacon'],
+	'../src/img/redford.png' : ['Robert Radford', 'robert radford'],
+	'../src/img/jaredleto.png' : ['Jared Leto', 'jared leto']
 };
 
 let currRandAct = '';
